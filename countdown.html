@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown to May 1, 2025</title>
+  <link rel="stylesheet" href="Countdown.css">
+</head>
+
+    <div class="greeting-container">
+        <h1 id="greeting">Hello!</h1>
+        <div class="time-display" id="timeDisplay"></div>
+    </div>
+<script>
+        function updateGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            
+           
+            const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timeDisplay').textContent = timeString;
+            greeting;
+            let timeClass;
+            
+           
+            switch(true) {
+                case (hours >= 5 && hours < 10):
+                    greeting = "Good morning!";
+                    timeClass = "morning";
+                    break;
+                case (hours >= 11 && hours < 14):
+                    greeting = "Good afternoon!";
+                    timeClass = "afternoon";
+                    break;
+
+break;
+                case (hours >= 15 && hours < 19):
+                    greeting = "Good evening!";
+                    timeClass = "evening";
+                    break;
+                default:
+                    greeting = "Good night!";
+                    timeClass = "night";
+            }
+document.getElementById('greeting').textContent = greeting;
+            document.body.className = timeClass;
+        }
+        updateGreeting();
+        setInterval(updateGreeting, 1000);
+    </script>
+    
+    
