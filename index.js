@@ -31,6 +31,11 @@
  //username = window.prompt('enter your username');
  //console.log(username);
 
+ //document.getElementById("mySubmit").onclick =function(){
+   // username = document.getElementById("myText").value;
+    //document.getElementById("myH1").textContent = `Hello ${username}`
+//}
+
  //CHANGING THE DATATYPE TO NUMBERS,STRINGS,BOOLEANS.
  //let age = window.prompt("how old are you?")
  //age+=1
@@ -76,7 +81,7 @@
 //}
 
 
-document.getElementById("mySubmit").onclick = function(){
+document.getElementById("mySubmit").onclick =function(){
     username = document.getElementById("myText").value;
     document.getElementById("myH1").textContent = `Hello ${username}`
 }
